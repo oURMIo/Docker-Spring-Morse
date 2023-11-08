@@ -1,0 +1,12 @@
+version: "3.3"
+
+services:
+  app:
+    build: ./morse
+    restart: on-failure
+    ports:
+      - 8008:8008
+    volumes:
+      - .m2:/root/.m2
+    stdin_open: true
+    tty: true
